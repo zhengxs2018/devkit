@@ -13,7 +13,6 @@
 │   ├── mock-tools/
 │   └── testing-tools/
 ├── scripts/
-├── tools/
 └── package.json
 ```
 
