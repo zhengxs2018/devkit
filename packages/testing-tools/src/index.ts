@@ -1,0 +1,1 @@
+export { inJSDom } from './jsdom'

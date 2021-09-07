@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "packages/mobile"
+		},
+		{
+			"path": "."
+		},
+	],
+	"settings": {
+		"files.associations": {
+			"api-extractor.json": "jsonc"
+		}
+	}
+}

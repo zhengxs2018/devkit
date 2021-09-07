@@ -1,0 +1,90 @@
+/** RawManifest The subset of package.json properties that Lerna uses */
+export type RawManifest = {
+  name: string
+  private: boolean
+  version: string
+  bin: string | Record<string, string>
+  scripts: Record<string, string>
+  dependencies: Record<string, string>
+  devDependencies: Record<string, string>
+  optionalDependencies: Record<string, string>
+  peerDependencies: Record<string, string>
+  publishConfig: Record<'directory' | 'registry' | 'tag', string>
+  workspaces: string[] | { packages: string[] }
+  [_: string]: unknown
+}
+
+export type Package = {
+  // readonly getters
+  readonly resolved: string
+  readonly location: string
+  readonly rootPath: string
+  readonly binLocation: string
+  readonly manifestLocation: string
+  readonly nodeModulesLocation: string
+
+  // accessors
+  version: string
+  contents: string
+  bin: RawManifest['bin']
+
+  readonly private: RawManifest['private']
+  readonly scripts: RawManifest['scripts']
+  readonly dependencies: RawManifest['dependencies']
+  readonly devDependencies: RawManifest['devDependencies']
+  readonly optionalDependencies: RawManifest['optionalDependencies']
+  readonly peerDependencies: RawManifest['peerDependencies']
+
+  /**
+   * Map-like retrieval of arbitrary values
+   *
+   * @param field - name to retrieve value
+   * @returns value stored under key, if present
+   */
+  get<
+    K extends string,
+    V = K extends keyof RawManifest ? RawManifest[K] : unknown
+  >(
+    key: K
+  ): V
+
+  /**
+   * Map-like storage of arbitrary values
+   *
+   * @param key - field name to store value
+   * @param val - value to store
+   * @returns instance for chaining
+   */
+  set<K extends keyof RawManifest>(
+    key: K,
+    val: RawManifest[K]
+  ): Promise<Package>
+
+  /**
+   * Provide shallow copy for munging elsewhere
+   */
+  toJSON(): Record<string, unknown>
+
+  /**
+   * Refresh internal state from disk (e.g., changed by external lifecycles)
+   */
+  refresh(): Promise<Package>
+
+  /**
+   * Write manifest changes to disk
+   * @returns resolves when write finished
+   */
+  serialize(): Promise<Package>
+
+  /**
+   * Mutate local dependency spec according to type
+   * @param resolved -  npa metadata
+   * @param depVersion -  semver
+   * @param savePrefix - npm_config_save_prefix
+   */
+  updateLocalDependency(
+    resolved: Record<string, unknown>,
+    depVersion: string,
+    savePrefix: string
+  ): void
+}

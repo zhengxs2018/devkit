@@ -1,0 +1,23 @@
+{
+  /* Visit https://aka.ms/tsconfig.json to read more about this file */
+  "extends": "./tsconfig.lib.json",
+  "compilerOptions": {
+    // 仅用于根目录脚本执行
+    // 子包使用独立的 tsconfig 配置
+    "module": "CommonJS"
+  },
+  "files": [],
+  "include": [],
+  "exclude": ["node_modules"],
+  "references": [
+    {
+      "path": "./packages/lerna-tools"
+    },
+    {
+      "path": "./packages/mock-tools"
+    },
+    {
+      "path": "./packages/testing-tools"
+    }
+  ]
+}

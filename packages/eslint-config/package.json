@@ -1,0 +1,36 @@
+{
+  "name": "@zhengxs-devkit/eslint-config",
+  "version": "0.1.0",
+  "main": "./index.js",
+  "files": [
+    "./index.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "eslint": ">=7"
+  },
+  "optionalDependencies": {
+    "eslint-plugin-vue": ">=7"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-tsdoc": "^0.2.14"
+  },
+  "devDependencies": {
+    "@types/eslint": "^7.28.0"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "author": {
+    "name": "zhengxs2018",
+    "email": "zhengxs2018@foxmail.com"
+  },
+  "license": "MIT"
+}
