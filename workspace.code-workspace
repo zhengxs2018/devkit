@@ -1,7 +1,7 @@
 {
 	"folders": [
 		{
-			"path": "packages/mobile"
+			"path": "packages/lerna-tools"
 		},
 		{
 			"path": "."
