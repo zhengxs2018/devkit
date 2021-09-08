@@ -18,7 +18,6 @@
     "@lerna/filter-packages": "^4.0.0",
     "@lerna/project": "^4.0.0"
   },
-  "devDependencies": {},
   "engines": {
     "node": ">=10"
   },
