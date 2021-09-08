@@ -1,7 +1,7 @@
 // For a detailed explanation regarding each configuration property, visit:
 // https://jestjs.io/docs/en/configuration.html
 const path = require('path')
-const { findPackages } = require('@zhengxs-devkit/lerna-tools')
+const { findPackages } = require('@zhengxs-devkit/lerna')
 
 const pkg = require('./package.json')
 

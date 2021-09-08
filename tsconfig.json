@@ -11,13 +11,13 @@
   "exclude": ["node_modules"],
   "references": [
     {
-      "path": "./packages/lerna-tools"
+      "path": "./packages/lerna"
     },
     {
-      "path": "./packages/mock-tools"
+      "path": "./packages/mock"
     },
     {
-      "path": "./packages/testing-tools"
+      "path": "./packages/testing"
     }
   ]
 }

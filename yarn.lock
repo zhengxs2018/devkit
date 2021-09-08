@@ -1995,7 +1995,7 @@
     "@typescript-eslint/types" "4.31.0"
     eslint-visitor-keys "^2.0.0"
 
-"@zhengxs-devkit/lerna-tools@file:./packages/lerna-tools":
+"@zhengxs-devkit/lerna@file:./packages/lerna":
   version "0.1.0"
   dependencies:
     "@lerna/filter-packages" "^4.0.0"

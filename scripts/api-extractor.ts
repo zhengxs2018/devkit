@@ -5,7 +5,7 @@ import { existsSync } from 'fs'
 import chalk from 'chalk'
 import minimist, { ParsedArgs } from 'minimist'
 import { Extractor, ExtractorConfig } from '@microsoft/api-extractor'
-import { Package, findPackages } from '@zhengxs-devkit/lerna-tools'
+import { Package, findPackages } from '@zhengxs-devkit/lerna'
 
 const ROOT_PATH = path.dirname(__dirname)
 

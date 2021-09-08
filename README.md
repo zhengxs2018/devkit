@@ -9,9 +9,9 @@
 ```text
 ├── packages/
 │   ├── eslint-config/  
-│   ├── lerna-tools/ 
-│   ├── mock-tools/
-│   └── testing-tools/
+│   ├── lerna/ 
+│   ├── mock/
+│   └── testing/
 ├── scripts/
 └── package.json
 ```

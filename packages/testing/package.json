@@ -1,5 +1,5 @@
 {
-  "name": "@zhengxs-devkit/mock-tools",
+  "name": "@zhengxs-devkit/testing",
   "version": "0.1.0",
   "publishConfig": {
     "access": "public"
@@ -8,14 +8,6 @@
     "dist",
     "types"
   ],
-  "peerDependencies": {
-    "better-mock": ">=0.3",
-    "path-to-regexp": ">=6"
-  },
-  "devDependencies": {
-    "better-mock": "^0.3.2",
-    "path-to-regexp": "^6.2.0"
-  },
   "engines": {
     "node": ">=10"
   },
