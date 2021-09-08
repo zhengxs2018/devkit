@@ -1,5 +1,5 @@
 {
-  "name": "@zhengxs-devkit/mock",
+  "name": "@zhengxs-devkit/mock-tools",
   "version": "0.1.0",
   "publishConfig": {
     "access": "public"
