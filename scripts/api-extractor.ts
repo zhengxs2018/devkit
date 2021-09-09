@@ -5,11 +5,15 @@ import { existsSync } from 'fs'
 import chalk from 'chalk'
 import minimist, { ParsedArgs } from 'minimist'
 import { Extractor, ExtractorConfig } from '@microsoft/api-extractor'
-import { Package, findPackages } from '@zhengxs-devkit/lerna'
+import {
+  LernaPackage,
+  getLernaPackages,
+  filterLernaPackages,
+} from '@zhengxs-devkit/lerna'
 
 const ROOT_PATH = path.dirname(__dirname)
 
-async function apiExtractor(pkg: Package) {
+async function apiExtractor(pkg: LernaPackage) {
   const extractorConfigPath = path.resolve(pkg.location, `api-extractor.json`)
   if (!existsSync(extractorConfigPath)) return
 
@@ -46,7 +50,12 @@ type CommandOptions = {
 }
 
 async function run(argv: CommandOptions & ParsedArgs) {
-  const packages = await findPackages(ROOT_PATH, argv._, argv.e || argv.exclude)
+  const packages = await filterLernaPackages(
+    getLernaPackages(ROOT_PATH),
+    argv._,
+    argv.e || argv.exclude
+  )
+
   return Promise.allSettled(packages.map(apiExtractor))
 }
 

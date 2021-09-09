@@ -1,6 +1,9 @@
 {
   "name": "@zhengxs-devkit/mock",
   "version": "0.1.0",
+  "main": "./dist/index.common.js",
+  "module": "./dist/index.esm.js",
+  "types": "./types/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
@@ -8,11 +11,7 @@
     "dist",
     "types"
   ],
-  "peerDependencies": {
-    "better-mock": "^0.3.2",
-    "path-to-regexp": "^6.2.0"
-  },
-  "devDependencies": {
+  "dependencies": {
     "better-mock": "^0.3.2",
     "path-to-regexp": "^6.2.0"
   },

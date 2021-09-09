@@ -2,10 +2,9 @@
 module.exports = {
   root: true,
   extends: ['@zhengxs-devkit/eslint-config'],
-  parser: '@typescript-eslint/parser',
   overrides: [
     {
-      files: ['*.js'],
+      files: ['scripts/*.ts', '*.js'],
       rules: {
         '@typescript-eslint/no-var-requires': 'off',
         'tsdoc/syntax': 'off',

@@ -1,0 +1,35 @@
+{
+  "name": "@zhengxs-devkit/build",
+  "version": "0.1.0",
+  "main": "./dist/index.js",
+  "types": "./types/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "types"
+  ],
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@zhengxs-devkit/lerna": "^0.1.0",
+    "cosmiconfig": "^7.0.1",
+    "lodash": "^4.17.21",
+    "package-json-type": "^1.0.3",
+    "parse-pkg-name": "^2.0.0",
+    "rollup": "^2.56.3",
+    "rollup-plugin-node-externals": "^2.2.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "author": {
+    "name": "zhengxs2018",
+    "email": "zhengxs2018@foxmail.com"
+  },
+  "license": "MIT"
+}

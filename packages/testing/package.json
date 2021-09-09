@@ -1,6 +1,8 @@
 {
   "name": "@zhengxs-devkit/testing",
   "version": "0.1.0",
+  "main": "./dist/index.js",
+  "types": "./types/index.d.ts",
   "publishConfig": {
     "access": "public"
   },

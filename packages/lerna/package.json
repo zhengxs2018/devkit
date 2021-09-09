@@ -3,10 +3,6 @@
   "version": "0.1.0",
   "main": "./dist/index.js",
   "types": "./types/index.d.ts",
-  "exports": {
-    ".": "./dist/index.js",
-    "./find-package": "./dist/find-package"
-  },
   "publishConfig": {
     "access": "public"
   },
@@ -16,7 +12,8 @@
   ],
   "dependencies": {
     "@lerna/filter-packages": "^4.0.0",
-    "@lerna/project": "^4.0.0"
+    "@lerna/project": "^4.0.0",
+    "lodash": "^4.17.21"
   },
   "engines": {
     "node": ">=10"

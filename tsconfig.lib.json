@@ -2,16 +2,16 @@
   /* Visit https://aka.ms/tsconfig.json to read more about this file */
   "compilerOptions": {
     /* Basic Options */
-    "target": "es2018",
+    "target": "es2015",
     "module": "esnext",
+    "composite": true,
     "declaration": true,
     "declarationMap": true,
-    "lib": ["es2018", "DOM", "DOM.Iterable"],
+    "emitDeclarationOnly": true,
 
     /* Strict Type-Checking Options */
     "strict": true,
     "noImplicitAny": true,
-    "strictNullChecks": true,
     "strictFunctionTypes": true,
     "strictBindCallApply": true,
     "strictPropertyInitialization": true,

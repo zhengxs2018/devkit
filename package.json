@@ -3,13 +3,16 @@
   "private": true,
   "version": "0.1.0",
   "scripts": {
-    "prepare": "yarn build",
-    "build": "tsc --build",
+    "prepare": "tsc --build",
+    "prebuild": "tsc --build",
+    "build": "ts-node -r tsconfig-paths/register ./scripts/build.ts",
+    "api-extractor": "ts-node -r tsconfig-paths/register ./scripts/api-extractor.ts",
     "test": "jest --passWithNoTests",
     "cov": "jest --coverage",
     "lint": "eslint . --ext [js,ts,tsx] --ignore-path .gitignore --cache --fix",
     "format": "prettier . --write --loglevel silent",
-    "api-extractor": "ts-node ./scripts/api-extractor.ts"
+    "pkg:build": "yarn workspace @zhengxs-devkit/build",
+    "pkg:lerna": "yarn workspace @zhengxs-devkit/lerna"
   },
   "workspaces": [
     "packages/*"
@@ -25,9 +28,9 @@
   },
   "dependencies": {
     "@microsoft/api-extractor": "^7.18.7",
-    "@zhengxs-devkit/lerna": "file:./packages/lerna",
     "chalk": "^4.1.2",
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.5",
+    "tsconfig-paths": "^3.11.0"
   },
   "devDependencies": {
     "@types/eslint": "^7.28.0",
@@ -35,7 +38,6 @@
     "@types/lodash": "^4.14.171",
     "@types/minimist": "^1.2.2",
     "@types/node": "^16.3.3",
-    "@typescript-eslint/parser": "^4.31.0",
     "eslint": "^7.31.0",
     "husky": "^7.0.2",
     "jest": "^27.1.0",
@@ -51,8 +53,7 @@
   },
   "author": {
     "name": "zhengxs2018",
-    "email": "zhengxs2018@foxmail.com",
-    "url": "https://zhengxs.cn"
+    "email": "zhengxs2018@foxmail.com"
   },
   "license": "MIT"
 }

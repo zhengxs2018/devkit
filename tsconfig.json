@@ -2,9 +2,11 @@
   /* Visit https://aka.ms/tsconfig.json to read more about this file */
   "extends": "./tsconfig.lib.json",
   "compilerOptions": {
-    // 仅用于根目录脚本执行
-    // 子包使用独立的 tsconfig 配置
-    "module": "CommonJS"
+    "module": "commonjs",
+    "baseUrl": "./",
+    "paths": {
+      "@zhengxs-devkit/*": ["./packages/*/src/index.ts"]
+    }
   },
   "files": [],
   "include": [],
@@ -12,6 +14,9 @@
   "references": [
     {
       "path": "./packages/lerna"
+    },
+    {
+      "path": "./packages/build"
     },
     {
       "path": "./packages/mock"

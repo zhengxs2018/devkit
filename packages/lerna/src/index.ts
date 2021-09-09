@@ -1,3 +1,7 @@
-export type { Package } from './interface'
+export {
+  getLernaPackages,
+  filterLernaPackages,
+  findLernaPackages,
+} from './packages'
 
-export { findPackages } from './find-packages'
+export type { LernaPackage, PackageFilter } from './types'

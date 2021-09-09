@@ -1,11 +1,10 @@
 {
   "extends": "../../tsconfig.lib.json",
   "compilerOptions": {
-    "module": "CommonJS",
     "rootDir": "./src",
     "outDir": "./dist",
     "declarationDir": "./types"
   },
-  "include": ["src/**/*.ts", "shim.d.ts"],
+  "include": ["src"],
   "exclude": ["node_modules"]
 }

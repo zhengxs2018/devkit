@@ -15,6 +15,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
   ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2021,
     ecmaFeatures: {
@@ -23,6 +24,9 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    // 不进行强制的 null 检查
+    // 否则所有使用 ! 的地方都无法使用
+    '@typescript-eslint/no-non-null-assertion': 'off',
     'tsdoc/syntax': 'warn',
     'import/no-extraneous-dependencies': [
       'error',

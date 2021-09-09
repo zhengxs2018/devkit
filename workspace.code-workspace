@@ -1,7 +1,10 @@
 {
 	"folders": [
 		{
-			"path": "packages/lerna-tools"
+			"path": "packages/build"
+		},
+		{
+			"path": "packages/lerna"
 		},
 		{
 			"path": "."
@@ -10,6 +13,11 @@
 	"settings": {
 		"files.associations": {
 			"api-extractor.json": "jsonc"
-		}
+		},
+		"cSpell.words": [
+			"devkit",
+			"iife",
+			"pkgs"
+		]
 	}
 }
