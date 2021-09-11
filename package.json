@@ -11,6 +11,9 @@
     "cov": "jest --coverage",
     "lint": "eslint . --ext [js,ts,tsx] --ignore-path .gitignore --cache --fix",
     "format": "prettier . --write --loglevel silent",
+    "docs": "vitepress dev docs",
+    "build-docs": "vitepress build docs",
+    "serve-docs": "vitepress serve docs",
     "pkg:build": "yarn workspace @zhengxs-devkit/build",
     "pkg:lerna": "yarn workspace @zhengxs-devkit/lerna",
     "pkg:shared": "yarn workspace @zhengxs-devkit/shared"
@@ -34,7 +37,8 @@
     "del": "^6.0.0",
     "minimist": "^1.2.5",
     "ts-node": "^10.2.1",
-    "tsconfig-paths": "^3.11.0"
+    "tsconfig-paths": "^3.11.0",
+    "vitepress": "^0.17.3"
   },
   "devDependencies": {
     "@types/eslint": "^7.28.0",

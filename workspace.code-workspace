@@ -1,13 +1,13 @@
 {
 	"folders": [
 		{
+			"path": "examples"
+		},
+		{
 			"path": "packages/build"
 		},
 		{
-			"path": "packages/shared"
-		},
-		{
-			"path": "packages/types"
+			"path": "docs"
 		},
 		{
 			"path": "."
