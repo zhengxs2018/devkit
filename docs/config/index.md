@@ -116,23 +116,24 @@ module.exports = defineConfig(async ctx => {
 
 输出文件格式，更多细节请见 [output.format](https://rollupjs.org/guide/en/#outputformat)
 
-### isTypeScript
+### outFile
 
-- **类型:** `boolean`
-- **默认:** `false`
+- **类型:** `string | ((format: ModuleFormat) => string)`
+- **默认:** `dist/[name].[umd].js`
 
-如果 `tsconfigFilePath` 定义的文件存在就为 `true`，可覆盖。
+输出文件名称，和 `outDir` 互斥。
+
+更多细节请见 [output.file](https://rollupjs.org/guide/en/#outputfile)
+### outDir
+
+- **类型:** `string`
+- **默认:** `undefined`
+
+输出目录，搭配 `entryFileNames` 使用使用，和 `outFile` 互斥。
+
+更多细节请见 [output.dir](https://rollupjs.org/guide/en/#outputdir)
 
 ## Rollup 配置
-
-### plugins
-
-- **类型:** `Plugin[]`
-- **默认:** `[]`
-
-Falsy 虚值的插件将被忽略，放置 `rollup` 支持的插件。
-
-更多细节请见 [plugins](https://rollupjs.org/guide/en/#plugins)
 
 ### banner
 
@@ -143,14 +144,23 @@ Falsy 虚值的插件将被忽略，放置 `rollup` 支持的插件。
 
 更多细节请见 [output.banner](https://rollupjs.org/guide/en/#outputbanner)
 
-### sourcemap
+### external
 
-- **类型:** `boolean | 'inline' | 'hidden'`
+- **类型:** `(string | RegExp)[] | RegExp | string | (id: string, parentId: string, isResolved: boolean) => boolean`
 - **默认:** `undefined`
 
-是否生成 `sourcemap` 文件
+剔除外部依赖。
 
-更多细节请见 [output.sourcemap](https://rollupjs.org/guide/en/#outputsourcemap)
+更多细节请见 [external](https://rollupjs.org/guide/en/#external)
+
+### plugins
+
+- **类型:** `Plugin[]`
+- **默认:** `[]`
+
+Falsy 虚值的插件将被忽略，放置 `rollup` 支持的插件。
+
+更多细节请见 [plugins](https://rollupjs.org/guide/en/#plugins)
 
 ### entryFileNames
 
@@ -160,6 +170,24 @@ Falsy 虚值的插件将被忽略，放置 `rollup` 支持的插件。
 多入口时使用。
 
 更多细节请见 [output.entryFileNames](https://rollupjs.org/guide/en/#outputentryfilenames)
+
+### inlineDynamicImports
+
+- **类型:** `boolean`
+- **默认:** `undefined`
+
+动态模块导入
+
+更多细节请见 [output.inlineDynamicImports](https://rollupjs.org/guide/en/#outputinlinedynamicimports)
+
+### sourcemap
+
+- **类型:** `boolean | 'inline' | 'hidden'`
+- **默认:** `undefined`
+
+是否生成 `sourcemap` 文件
+
+更多细节请见 [output.sourcemap](https://rollupjs.org/guide/en/#outputsourcemap)
 
 ### globals
 
@@ -171,6 +199,13 @@ Falsy 虚值的插件将被忽略，放置 `rollup` 支持的插件。
 更多细节请见 [output.globals](https://rollupjs.org/guide/en/#outputglobals)
 
 ## Typescript 配置
+
+### isTypeScript
+
+- **类型:** `boolean`
+- **默认:** `false`
+
+如果 `tsconfigFilePath` 定义的文件存在就为 `true`，可覆盖。
 
 ### tsconfigFilePath
 
