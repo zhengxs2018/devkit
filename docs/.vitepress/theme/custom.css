@@ -1,0 +1,20 @@
+:root {
+  --c-brand: #646cff;
+  --c-brand-light: #747bff;
+}
+
+.content img {
+  border-radius: 10px;
+}
+
+.nav-dropdown-link-item .icon {
+  display: none;
+}
+
+.custom-block.tip {
+  border-color: var(--c-brand-light);
+}
+
+.DocSearch {
+  --docsearch-primary-color: var(--c-brand) !important;
+}

@@ -11,9 +11,9 @@
     "cov": "jest --coverage",
     "lint": "eslint . --ext [js,ts,tsx] --ignore-path .gitignore --cache --fix",
     "format": "prettier . --write --loglevel silent",
-    "docs": "vitepress dev docs",
-    "build-docs": "vitepress build docs",
-    "serve-docs": "vitepress serve docs",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:release": "gh-pages -d ./docs/.vitepress/dist",
     "pkg:build": "yarn workspace @zhengxs-devkit/build",
     "pkg:lerna": "yarn workspace @zhengxs-devkit/lerna",
     "pkg:shared": "yarn workspace @zhengxs-devkit/shared"
