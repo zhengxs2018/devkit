@@ -16,8 +16,8 @@
 
 ```text
 ├── examples/
-│   ├── monorepo-*/                  - monorepo 工程示例
-│   └── package-*/                   - 独立工程示例
+│   ├── monorepo-*/                  - monorepo 示例
+│   └── package-*/                   - 独立包示例
 ├── packages/
 │   ├── build/
 │   ├── eslint-config/

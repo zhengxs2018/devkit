@@ -1,0 +1,13 @@
+{
+  "name": "package-c",
+  "version": "0.1.0",
+  "types": "./index.d.ts",
+  "files": [
+    "*.d.ts"
+  ],
+  "author": {
+    "name": "zhengxs2018",
+    "email": "zhengxs2018@foxmail.com"
+  },
+  "license": "MIT"
+}

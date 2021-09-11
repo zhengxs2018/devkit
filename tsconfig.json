@@ -8,9 +8,11 @@
       "@zhengxs-devkit/*": ["./packages/*/src/index.ts"]
     }
   },
+  // 防止编译根目录文件
   "files": [],
   "include": [],
   "exclude": ["node_modules"],
+  // 解决类型生成问题
   "references": [
     {
       "path": "packages/shared"

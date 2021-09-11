@@ -1,0 +1,21 @@
+{
+  "name": "root",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "build": "tsc --build && node ./scripts/build.js"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/lodash": "^4.14.171",
+    "@types/node": "^16.3.3",
+    "typescript": "^4.4.2"
+  },
+  "author": {
+    "name": "zhengxs2018",
+    "email": "zhengxs2018@foxmail.com"
+  },
+  "license": "MIT"
+}

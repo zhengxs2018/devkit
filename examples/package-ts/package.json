@@ -1,0 +1,37 @@
+{
+  "name": "package-ts",
+  "version": "0.1.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.esm.js",
+  "browser": "./dist/index.umd.js",
+  "types": "./types/index.d.ts",
+  "scripts": {
+    "build": "tsc && ts-node ./scripts/build.ts"
+  },
+  "files": [
+    "dist",
+    "types"
+  ],
+  "build": {
+    "formats": [
+      "esm",
+      "umd",
+      "cjs"
+    ],
+    "globals": {
+      "lodash": "_"
+    }
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  },
+  "author": {
+    "name": "zhengxs2018",
+    "email": "zhengxs2018@foxmail.com"
+  },
+  "license": "MIT"
+}

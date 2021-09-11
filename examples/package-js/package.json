@@ -1,0 +1,24 @@
+{
+  "name": "package-js",
+  "version": "0.1.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.esm.js",
+  "browser": "./dist/index.umd.js",
+  "scripts": {
+    "build": "node ./scripts/build.js"
+  },
+  "build": {
+    "formats": [
+      "esm",
+      "umd",
+      "cjs"
+    ],
+    "globals": {
+      "lodash": "_"
+    }
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "license": "MIT"
+}
