@@ -109,7 +109,7 @@ export function getRollupPlugins(
     jsonOptions,
     bubleOptions,
     isTypeScript,
-    tsconfigOverride,
+    tsconfigOverride = {},
   } = userConfig
   const {
     plugins: userPlugins,
@@ -132,12 +132,16 @@ export function getRollupPlugins(
   ]
 
   if (isTypeScript) {
+    const { compilerOptions, ...extraOptions } = tsconfigOverride
     plugins.push(
       typescript2({
         cwd: projectFolder,
+        clean: true,
         tsconfig: tsconfigFilePath,
-        tsconfigDefaults: {
+        tsconfigOverride: {
+          ...extraOptions,
           compilerOptions: {
+            ...compilerOptions,
             // 为了支持动态模块
             target: 'esnext',
             module: 'esnext',
@@ -151,8 +155,6 @@ export function getRollupPlugins(
             declarationMap: false,
           },
         },
-        tsconfigOverride,
-        clean: true,
         check: disableTypeCheck !== true,
       })
     )

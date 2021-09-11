@@ -8,13 +8,16 @@
 
 编译脚本在 `根目录` 的 `scripts/build.ts` 中，可以配置跳过某些包的编译。
 
-目前暂未想到如何不重复生成类型文件和指定其他目录（如`./types`），编译的产物不包括 `*.d.ts`。
+目前暂未想到如何不重复生成类型文件和指定其他目录（如`./types`），所以编译的产物不包括 `*.d.ts`。
 
 如果想生成 `*.d.ts` 文件，可以在 `根目录` 的 `tsconfig.json#references` 配置下。
 
 ## 目录结构
 
 ```text
+├── examples/
+│   ├── monorepo-*/                  - monorepo 工程示例
+│   └── package-*/                   - 独立工程示例
 ├── packages/
 │   ├── build/
 │   ├── eslint-config/
@@ -24,8 +27,16 @@
 ├── scripts/
 │   ├── api-extractor.ts
 │   └── build.ts
+│   ├── clean.ts
 └── package.json
 ```
+
+## 待办列表
+
+- [ ] 支持命令行操作
+- [ ] 支持 `yarn create` 创建工程
+- [ ] 支持 vue3 工程编译
+- [ ] 支持 react 工程编译
 
 ## License
 
