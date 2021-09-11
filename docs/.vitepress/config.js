@@ -8,6 +8,7 @@ const pkg = require('../../package.json')
  module.exports = {
   title: 'Devkit',
   lang: 'zh-CN',
+  base: '/zhengxs-devkit',
   description: '非常实用的前端开发者工具',
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]],
   themeConfig: {
