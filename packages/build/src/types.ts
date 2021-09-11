@@ -128,7 +128,7 @@ export interface MergedUserConfig extends UserConfig {
 
 export type UserConfigFunction = (
   ctx: BuildContext
-) => UserConfig | UserConfig[]
+) => UserConfig | UserConfig[] | Promise<UserConfig>
 
 export type BundleOptions = {
   rootPath: string

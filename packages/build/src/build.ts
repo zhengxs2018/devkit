@@ -97,6 +97,7 @@ export async function build(options: BuildOptions): Promise<void> {
     await rollup(ctx, config as MergedUserConfig)
   }
 
-  const userConfigs = arrayify(unwrap(userConfig || {}, ctx))
+  const resolvedConfig = await Promise.resolve(unwrap(userConfig || {}, ctx))
+  const userConfigs = arrayify(resolvedConfig)
   await Promise.all(userConfigs.map(bundle))
 }

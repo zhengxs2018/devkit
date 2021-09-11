@@ -21,7 +21,7 @@ const pkg = require('../../package.json')
 
     nav: [
       { text: '指引', link: '/guide/' },
-      // { text: '配置', link: '/config/' },
+      { text: '配置', link: '/config/' },
       // {
       //   text: '相关链接',
       //   items: [
