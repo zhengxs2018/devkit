@@ -1,7 +1,7 @@
 export {
   getLernaPackages,
   filterLernaPackages,
-  findLernaPackages,
+  findAndFilterLernaPackages,
 } from './packages'
 
 export type { LernaPackage, PackageFilter } from './types'

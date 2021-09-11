@@ -1,8 +1,8 @@
 {
   "name": "@zhengxs-devkit/mock",
   "version": "0.1.0",
-  "main": "./dist/index.common.js",
-  "module": "./dist/index.esm.js",
+  "main": "./dist/mock.common.js",
+  "module": "./dist/mock.esm.js",
   "types": "./types/index.d.ts",
   "publishConfig": {
     "access": "public"

@@ -1,84 +1,150 @@
-import { ModuleFormat, InputOption, InputOptions, OutputOptions } from 'rollup'
-import type { IPackageJson } from 'package-json-type'
-import type { cosmiconfig } from 'cosmiconfig'
+import type {
+  InputOption,
+  InputOptions,
+  OutputOptions,
+  ModuleFormat,
+} from 'rollup'
+import type { RollupNodeResolveOptions } from '@rollup/plugin-node-resolve'
+import type { RollupCommonJSOptions } from '@rollup/plugin-commonjs'
+import type { RollupBubleOptions } from '@rollup/plugin-buble'
+import type { RollupJsonOptions } from '@rollup/plugin-json'
+import type { ExternalsOptions } from 'rollup-plugin-node-externals'
+import type { RPT2Options } from 'rollup-plugin-typescript2'
 
-export type ConfigExplorer = ReturnType<typeof cosmiconfig>
+import type { PackageJson } from '@zhengxs-devkit/types'
 
-export interface PackageJson extends IPackageJson {
-  module?: string
+export interface BundleInputOptions extends Pick<InputOptions, 'plugins'> {
+  /**
+   * 指定入口文件
+   *
+   * @see https://rollupjs.org/guide/en/#input
+   * @defaultValue `src/index.js`
+   */
+  entry?: InputOption
 }
 
-export interface BundleOptions
-  extends Pick<InputOptions, 'plugins'>,
-    Pick<
-      OutputOptions,
-      | 'banner'
-      | 'footer'
-      | 'sourcemap'
-      | 'assetFileNames'
-      | 'chunkFileNames'
-      | 'entryFileNames'
-      | 'exports'
-      | 'globals'
-      | 'paths'
-    >,
-    Partial<Record<ModuleFormat, OutputOptions>> {
+export interface BundleOutputOptions
+  extends Pick<
+    OutputOptions,
+    | 'banner'
+    | 'sourcemap'
+    | 'assetFileNames'
+    | 'chunkFileNames'
+    | 'entryFileNames'
+    | 'globals'
+    | 'paths'
+  > {
   /**
-   * 库名称，默认为当前包名称
+   * 导出的全局引用的名称
+   *
+   * @see https://rollupjs.org/guide/en/#outputname
+   * @defaultValue `<unscopedPackageName>`
    */
   name?: string
 
   /**
-   * 指定入口文件
-   *
-   * 如果存在 `tsconfig.json`，那默认入口为 `src/index.ts`
-   *
-   * @See {@link https://rollupjs.org/guide/en/#input|input}
-   * @defaultValue `src/index.js`
-   */
-  entry?: InputOption
-
-  /**
    * 输出格式
    *
+   * @see https://rollupjs.org/guide/en/#outputformat
    * @defaultValue `["es", "cjs", "umd"]`
    */
   formats?: ModuleFormat[]
 
   /**
-   * 输出目录，和 `file` 属性互斥
+   * 多文件输出目录，和 `outFile` 属性互斥
    *
+   * @see https://rollupjs.org/guide/en/#outputdir
    * @defaultValue `null`
    */
-  dir?: string
+  outDir?: string
 
   /**
-   * 输出文件，和 `dir` 属性互斥
+   * 单文件输出，和 `outDir` 属性互斥
    *
+   * @see https://rollupjs.org/guide/en/#outputfile
    * @defaultValue `dist/index.[format].js`
    */
-  file?: string | ((format: ModuleFormat) => string)
+  outFile?: string | ((format: ModuleFormat, ctx: BuildContext) => string)
+}
+
+export interface UserConfig extends BundleOutputOptions, BundleInputOptions {
+  /**
+   * 传递给 `@rollup/plugin-node-resolve` 插件的选项。
+   */
+  nodeResolveOptions?: RollupNodeResolveOptions
 
   /**
-   * 用于判断是否 ts 工程
+   * 传递给 `@rollup/plugin-commonjs` 插件的选项。
+   */
+  commonjsOptions?: RollupCommonJSOptions
+
+  /**
+   * 传递给 `@rollup/plugin-json` 插件的选项。
+   */
+  jsonOptions?: RollupJsonOptions
+
+  /**
+   * 传递给 `@rollup/plugin-buble` 插件的选项。
+   */
+  bubleOptions?: RollupBubleOptions
+
+  /**
+   * 传递给 `rollup-plugin-node-externals` 插件的选项。
+   */
+  nodeExternalsOptions?: ExternalsOptions
+
+  // todo
+  // minify: boolean | 'terser' | 'esbuild'
+
+  /**
+   * 是否 typescript 项目
    */
   isTypeScript?: boolean
 
   /**
-   * tsconfig.json 文件名称
-   *
-   * @defaultValue `tsconfig.json`
+   * 自定义 tsconfig 文件路径
    */
-  tsconfig?: string
+  tsconfigFilePath?: string
 
   /**
-   * 禁用 typescript 编译时的类型检查
+   * 允许外部覆盖 tsconfig.json 的配置
    *
-   * @defaultValue `false`
+   * @see https://aka.ms/tsconfig.json
+   */
+  tsconfigOverride?: RPT2Options['tsconfigOverride']
+
+  /**
+   * 是否禁用 ts 类型检查
    */
   disableTypeCheck?: boolean
 }
-export interface BuildArgs extends Omit<BundleOptions, 'name'> {
-  cwd?: string
-  configFile?: string
+
+export interface MergedUserConfig extends UserConfig {
+  name: string
+  entry: InputOption
+  formats: ModuleFormat[]
+  isTypeScript: boolean
+}
+
+export type UserConfigFunction = (
+  ctx: BuildContext
+) => UserConfig | UserConfig[]
+
+export type BundleOptions = {
+  rootPath: string
+  projectFolder: string
+  packageJson: PackageJson
+  packageFilePath: string
+}
+
+export interface BuildOptions extends BundleOptions {
+  rootConfig: UserConfig | null
+  userConfig: UserConfig | UserConfig[] | UserConfigFunction | null
+}
+
+export interface BuildContext extends BundleOptions {
+  packageName: string
+  unscopedPackageName: string
+  libraryName: string
+  resolvePath: (path: string, data?: Record<string, string>) => string
 }

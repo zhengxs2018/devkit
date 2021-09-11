@@ -50,16 +50,7 @@ export function filterLernaPackages(
   )
 }
 
-/**
- * 或去
- *
- * @public
- * @param cwd               - Defaults to process.cwd()
- * @param opts              - 过滤配置
- * @throws when a given glob would produce an empty list of packages and `continueIfNoMatch` is not set.
- * @returns 模块列表
- */
-export function findLernaPackages(
+export function findAndFilterLernaPackages(
   cwd: string,
   opts?: string | string[] | PackageFilter
 ): LernaPackage[] {

@@ -4,15 +4,16 @@
   "version": "0.1.0",
   "scripts": {
     "prepare": "tsc --build",
-    "prebuild": "tsc --build",
     "build": "ts-node -r tsconfig-paths/register ./scripts/build.ts",
+    "clean": "ts-node -r tsconfig-paths/register ./scripts/clean.ts",
     "api-extractor": "ts-node -r tsconfig-paths/register ./scripts/api-extractor.ts",
     "test": "jest --passWithNoTests",
     "cov": "jest --coverage",
     "lint": "eslint . --ext [js,ts,tsx] --ignore-path .gitignore --cache --fix",
     "format": "prettier . --write --loglevel silent",
     "pkg:build": "yarn workspace @zhengxs-devkit/build",
-    "pkg:lerna": "yarn workspace @zhengxs-devkit/lerna"
+    "pkg:lerna": "yarn workspace @zhengxs-devkit/lerna",
+    "pkg:shared": "yarn workspace @zhengxs-devkit/shared"
   },
   "workspaces": [
     "packages/*"
@@ -29,6 +30,7 @@
   "dependencies": {
     "@microsoft/api-extractor": "^7.18.7",
     "chalk": "^4.1.2",
+    "del": "^6.0.0",
     "minimist": "^1.2.5",
     "tsconfig-paths": "^3.11.0"
   },

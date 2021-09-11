@@ -1,15 +1,17 @@
 {
-  "name": "@zhengxs-devkit/testing",
+  "name": "@zhengxs-devkit/types",
   "version": "0.1.0",
-  "main": "./dist/testing.js",
-  "types": "./types/index.d.ts",
+  "main": "",
+  "types": "./index.d.ts",
   "publishConfig": {
     "access": "public"
   },
   "files": [
-    "dist",
-    "types"
+    "*.d.ts"
   ],
+  "dependencies": {
+    "package-json-type": "^1.0.3"
+  },
   "engines": {
     "node": ">=10"
   },

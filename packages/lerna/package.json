@@ -1,7 +1,7 @@
 {
   "name": "@zhengxs-devkit/lerna",
   "version": "0.1.0",
-  "main": "./dist/index.js",
+  "main": "./dist/lerna.js",
   "types": "./types/index.d.ts",
   "publishConfig": {
     "access": "public"

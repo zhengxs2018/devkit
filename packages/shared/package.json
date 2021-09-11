@@ -1,7 +1,9 @@
 {
-  "name": "@zhengxs-devkit/testing",
+  "name": "@zhengxs-devkit/shared",
   "version": "0.1.0",
-  "main": "./dist/testing.js",
+  "main": "./dist/shared.js",
+  "module": "./dist/shared.esm.js",
+  "unpkg": "./dist/shared.umd.js",
   "types": "./types/index.d.ts",
   "publishConfig": {
     "access": "public"
@@ -10,6 +12,9 @@
     "dist",
     "types"
   ],
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
   "engines": {
     "node": ">=10"
   },

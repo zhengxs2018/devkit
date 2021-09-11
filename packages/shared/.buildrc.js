@@ -1,5 +1,8 @@
 const { defineConfig } = require('@zhengxs-devkit/build')
 
 module.exports = defineConfig({
-  formats: ['cjs']
+  formats: ['cjs', 'esm', 'umd'],
+  globals: {
+    lodash: '_'
+  }
 })

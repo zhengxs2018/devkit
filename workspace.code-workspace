@@ -4,7 +4,10 @@
 			"path": "packages/build"
 		},
 		{
-			"path": "packages/lerna"
+			"path": "packages/shared"
+		},
+		{
+			"path": "packages/types"
 		},
 		{
 			"path": "."

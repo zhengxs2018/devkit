@@ -26,6 +26,7 @@
     "noPropertyAccessFromIndexSignature": true,
 
     /* Module Resolution Options */
+    "isolatedModules": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
 

@@ -95,7 +95,7 @@ export type PackageFilter = {
   /** 指定排除的包 */
   exclude?: string | string[]
   /**
-   * 跳过私有的包 package.json private
+   * 跳过私有的包
    * */
   skipPrivate?: boolean
   /**

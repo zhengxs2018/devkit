@@ -12,6 +12,9 @@
   "include": [],
   "exclude": ["node_modules"],
   "references": [
+		{
+			"path": "packages/shared"
+		},
     {
       "path": "./packages/lerna"
     },

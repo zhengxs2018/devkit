@@ -1,12 +1,5 @@
-export { buildForLerna, getRollupConfigsForLerna } from './build/lerna'
-export { bundle, getBundleOpts, mergeBundleOptions } from './build/bundle'
+export { run } from './run/run'
+export { runInLerna } from './run/runInLerna'
 
-export {
-  defineConfig,
-  createConfigExplorer,
-  searchUserConfig,
-  loadUserConfig,
-} from './config/getUserConfig'
-export { getRollupConfig } from './config/getRollupConfig'
-
-export type { PackageJson, BundleOptions } from './types'
+export { defineConfig } from './utils/defineConfig'
+export { mergeConfig } from './utils/mergeConfig'

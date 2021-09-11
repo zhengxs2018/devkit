@@ -1,9 +1,7 @@
 import path from 'path'
-import { buildForLerna } from '@zhengxs-devkit/build'
+import { runInLerna } from '@zhengxs-devkit/build'
 
-buildForLerna({
+runInLerna({
   cwd: path.dirname(__dirname),
-  pkgs: {
-    exclude: ['@zhengxs-devkit/eslint-config'],
-  },
+  exclude: ['@zhengxs-devkit/eslint-config', '@zhengxs-devkit/types'],
 })

@@ -1,11 +1,12 @@
 .DS_store
 
 node_modules/
+temp/
 
+coverage/
 dist/
 types/
-temp/
-coverage/
+!packages/types/
 
 # Logs
 logs
