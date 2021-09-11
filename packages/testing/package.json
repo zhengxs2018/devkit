@@ -10,6 +10,14 @@
     "dist",
     "types"
   ],
+  "registry": {
+    "type": "git",
+    "url": "git+https://github.com/zhengxs2018/zhengxs-devkit.git",
+    "directory": "packages/testing"
+  },
+  "bugs": {
+    "url": "https://github.com/vuejs/zhengxs-devkit/issues"
+  },
   "engines": {
     "node": ">=10"
   },

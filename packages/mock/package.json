@@ -15,6 +15,14 @@
     "better-mock": "^0.3.2",
     "path-to-regexp": "^6.2.0"
   },
+  "registry": {
+    "type": "git",
+    "url": "git+https://github.com/zhengxs2018/zhengxs-devkit.git",
+    "directory": "packages/mock"
+  },
+  "bugs": {
+    "url": "https://github.com/vuejs/zhengxs-devkit/issues"
+  },
   "engines": {
     "node": ">=10"
   },

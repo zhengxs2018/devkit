@@ -15,6 +15,14 @@
   "dependencies": {
     "lodash": "^4.17.21"
   },
+  "registry": {
+    "type": "git",
+    "url": "git+https://github.com/zhengxs2018/zhengxs-devkit.git",
+    "directory": "packages/shared"
+  },
+  "bugs": {
+    "url": "https://github.com/vuejs/zhengxs-devkit/issues"
+  },
   "engines": {
     "node": ">=10"
   },

@@ -3,6 +3,12 @@
   "version": "0.1.0",
   "main": "./dist/build.js",
   "types": "./types/index.d.ts",
+  "keywords": [
+    "build",
+    "devkit",
+    "rollup",
+    "monorepo"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -30,6 +36,14 @@
   },
   "devDependencies": {
     "@types/signal-exit": "^3.0.1"
+  },
+  "registry": {
+    "type": "git",
+    "url": "git+https://github.com/zhengxs2018/zhengxs-devkit.git",
+    "directory": "packages/build"
+  },
+  "bugs": {
+    "url": "https://github.com/vuejs/zhengxs-devkit/issues"
   },
   "engines": {
     "node": ">=10"

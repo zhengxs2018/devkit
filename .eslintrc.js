@@ -4,7 +4,7 @@ module.exports = {
   extends: ['@zhengxs-devkit/eslint-config'],
   overrides: [
     {
-      files: ['scripts/*.ts', 'examples/', '*.js'],
+      files: ['scripts/*.ts', 'examples/**/*.ts', '*.js'],
       rules: {
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/no-var-requires': 'off',

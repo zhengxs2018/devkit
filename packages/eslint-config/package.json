@@ -27,6 +27,14 @@
   "devDependencies": {
     "@types/eslint": "^7.28.0"
   },
+  "registry": {
+    "type": "git",
+    "url": "git+https://github.com/zhengxs2018/zhengxs-devkit.git",
+    "directory": "packages/eslint-config"
+  },
+  "bugs": {
+    "url": "https://github.com/vuejs/zhengxs-devkit/issues"
+  },
   "engines": {
     "node": ">=10"
   },
