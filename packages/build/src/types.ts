@@ -13,7 +13,8 @@ import type { RPT2Options } from 'rollup-plugin-typescript2'
 
 import type { PackageJson } from '@zhengxs-devkit/types'
 
-export interface BundleInputOptions extends Pick<InputOptions, 'plugins'> {
+export interface BundleInputOptions
+  extends Pick<InputOptions, 'external' | 'plugins'> {
   /**
    * 指定入口文件
    *
@@ -33,6 +34,7 @@ export interface BundleOutputOptions
     | 'entryFileNames'
     | 'globals'
     | 'paths'
+    | 'inlineDynamicImports'
   > {
   /**
    * 导出的全局引用的名称

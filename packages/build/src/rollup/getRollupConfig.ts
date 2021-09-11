@@ -27,14 +27,16 @@ export function getRollupConfig(
   const options: MergedRollupOptions = {
     input: getInputOption(ctx, entry!),
     plugins: getRollupPlugins(ctx, userConfig),
+    external: userConfig['external'],
     output: [],
   }
 
   const userOutputOptions = pick(
     userConfig,
     'banner',
-    // 'assetFileNames',
-    // 'chunkFileNames',
+    'inlineDynamicImports',
+    'assetFileNames',
+    'chunkFileNames',
     'entryFileNames',
     'paths',
     'globals',
