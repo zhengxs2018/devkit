@@ -2,7 +2,7 @@
 
 ## 配置文件
 
-### 配置文件解析
+### 文件加载
 
 > 注意：如果是 `monorepo` 模式，根配置只允许返回对象。
 
@@ -15,7 +15,7 @@
 
 具体说明详见 [cosmiconfig](https://www.npmjs.com/package/cosmiconfig) 模块。
 
-### 配置智能提示
+### 智能提示
 
 因为工具本身附带 Typescript 类型，所以你可以通过 IDE 和 jsdoc 的配合来实现智能提示：
 
