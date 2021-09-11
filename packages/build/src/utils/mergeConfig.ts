@@ -31,8 +31,7 @@ function mergeGlobalsOption(
 ): GlobalsOption | undefined {
   if (isFunction(srcValue)) return srcValue
   if (isObject(srcValue)) {
-    if (isFunction(value)) return srcValue
-    else Object.assign({}, value, srcValue)
+    return isFunction(value) ? srcValue : Object.assign({}, value, srcValue)
   }
   return value || srcValue
 }
