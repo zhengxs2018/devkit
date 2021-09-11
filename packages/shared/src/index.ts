@@ -1,7 +1,8 @@
-import { isFunction } from 'lodash'
+import { isFunction, isNil } from 'lodash'
 
-export function arrayify<T>(arr: T | T[]): T[] {
-  return Array.isArray(arr) ? arr : [arr]
+export function arrayify<T>(value: T | T[]): T[] {
+  if (isNil(value)) return []
+  return Array.isArray(value) ? value : [value]
 }
 
 export function unwrap<TReturn, TArgs extends unknown[]>(
