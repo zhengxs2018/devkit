@@ -9,18 +9,30 @@ async function run() {
     exclude: ['@zhengxs-devkit/eslint-config', '@zhengxs-devkit/types'],
   })
 
-  const mainFields = ['main', 'module', 'browser', 'unpkg']
-  for (const pkg of packages) {
-    const files: string[] = mainFields
-      .map(key => pkg.get(key) as string)
-      .concat('tsconfig.tsbuildinfo')
+  const paths = ['dist', 'tsconfig.tsbuildinfo']
 
-    const deletedFilePaths = await del(files.filter(Boolean), {
-      cwd: rootPath,
-    })
+  const filesAndDirectories = packages.map(pkg => {
+    return paths.map(name => path.resolve(pkg.location, name))
+  })
 
-    console.log('Deleted files or Directories:\n', deletedFilePaths.join('\n'))
+  const deletedFilePaths = await del(filesAndDirectories.flat(), {
+    cwd: rootPath,
+  })
+
+  if (deletedFilePaths.length === 0) {
+    console.log('[clean] 未匹配任何文件或文件夹')
+    return
   }
+
+  function relativePath(file: string): string {
+    return path.relative(rootPath, file)
+  }
+
+  console.log()
+  console.log(
+    '[clean] 已删除:\n',
+    deletedFilePaths.map(relativePath).join('\n')
+  )
 }
 
 run()
