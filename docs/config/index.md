@@ -49,7 +49,7 @@ const { defineConfig } = require('@zhengxs-devkit/build')
 
 module.exports = defineConfig([
   {
-    formats: ['esm', 'cjs']
+    formats: ['esm', 'cjs'],
   },
   {
     formats: ['umd'],
@@ -57,8 +57,8 @@ module.exports = defineConfig([
     nodeExternalsOptions: {
       // 把 lodash 的代码打包进来
       // 默认剔除所有依赖项目
-      exclude: ['lodash']
-    }
+      exclude: ['lodash'],
+    },
   },
 ])
 ```
@@ -260,11 +260,10 @@ Falsy 虚值的插件将被忽略，放置 `rollup` 支持的插件。
 
 JavaScript 使用的是 [buble](https://github.com/bublejs/buble) ，而不是 [babel](https://babeljs.io/)。
 
-更多细节请见 [Bublé Guide]( https://buble.surge.sh/guide/)
+更多细节请见 [Bublé Guide](https://buble.surge.sh/guide/)
 
 ### nodeExternalsOptions
 
 - **类型:** [`NodeExternalsOptions`](https://github.com/Septh/rollup-plugin-node-externals#options)
 
 传递给 [rollup-plugin-node-externals](https://github.com/Septh/rollup-plugin-node-externals) 插件的选项。
-

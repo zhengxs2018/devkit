@@ -5,7 +5,7 @@ const pkg = require('../../package.json')
 /**
  * @type {import('vitepress').UserConfig}
  */
- module.exports = {
+module.exports = {
   title: 'Devkit',
   lang: 'zh-CN',
   base: '/zhengxs-devkit',
@@ -39,6 +39,6 @@ const pkg = require('../../package.json')
 
     sidebar: {
       // pass
-    }
-  }
+    },
+  },
 }

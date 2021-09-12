@@ -6,15 +6,15 @@ module.exports = defineConfig([
     formats: ['esm', 'cjs'],
     // globals 做了特殊的处理，会和根目录的配置合并
     globals: {
-      'package-d': 'packageD'
-    }
+      'package-d': 'packageD',
+    },
   },
   {
     formats: ['umd'],
     // see https://www.npmjs.com/package/rollup-plugin-node-externals
     nodeExternalsOptions: {
       // 不剔除 package-d 的依赖
-      exclude: ['package-d']
-    }
+      exclude: ['package-d'],
+    },
   },
 ])

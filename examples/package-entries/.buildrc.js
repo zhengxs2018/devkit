@@ -6,10 +6,10 @@ module.exports = defineConfig({
    */
   formats: ['cjs'],
   /**
-  * 具体说明详见 rollup 官方文档
-  *
-  * @see https://rollupjs.org/guide/en/#input
-  */
+   * 具体说明详见 rollup 官方文档
+   *
+   * @see https://rollupjs.org/guide/en/#input
+   */
   entry: {
     index: 'src/index.ts',
     arrayify: 'src/arrayify.ts',
@@ -18,7 +18,7 @@ module.exports = defineConfig({
   /**
    * 具体说明详见 rollup 官方文档
    * 文件输出的路径是基于 outDir 来的
-   * 
+   *
    * @see https://rollupjs.org/guide/en/#outputentryfilenames
    * @type {import('rollup').RenderedChunk}
    */

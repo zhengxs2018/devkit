@@ -25,8 +25,9 @@
 
 ```text
 ├── src/
-│   ├── main-a.js
-│   └── main-b.js
+│   ├── arrayify.js
+│   ├── unwrap.js
+│   └── index.js
 ├── .buildrc.js
 └── package.json
 ```
@@ -39,15 +40,15 @@ const { defineConfig } = require('@zhengxs-devkit/build')
 module.exports = defineConfig({
   /**
    * 注意 umd 和 iife 不支持代码拆分
-   * 
+   *
    * 默认输出：umd，esm，cjs
    */
   formats: ['cjs'],
   /**
-  * 具体说明详见 rollup 官方文档
-  *
-  * @see https://rollupjs.org/guide/en/#input
-  */
+   * 具体说明详见 rollup 官方文档
+   *
+   * @see https://rollupjs.org/guide/en/#input
+   */
   entry: {
     index: 'src/index.js',
     arrayify: 'src/arrayify.js',
@@ -56,7 +57,7 @@ module.exports = defineConfig({
   /**
    * 具体说明详见 rollup 官方文档
    * 文件输出的路径是基于 outDir 来的
-   * 
+   *
    * @see https://rollupjs.org/guide/en/#outputentryfilenames
    * @type {import('rollup').RenderedChunk}
    */
