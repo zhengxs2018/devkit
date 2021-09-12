@@ -8,11 +8,11 @@ const pkg = require('../../package.json')
 module.exports = {
   title: 'Devkit',
   lang: 'zh-CN',
-  base: '/zhengxs-devkit',
+  base: '/devkit',
   description: '非常实用的前端开发者工具',
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]],
   themeConfig: {
-    repo: 'zhengxs2018/zhengxs-devkit',
+    repo: 'zhengxs-devkit/devkit',
     // logo: '/logo.svg',
     docsDir: 'docs',
     docsBranch: 'main',

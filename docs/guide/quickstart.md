@@ -38,4 +38,4 @@ yarn create zdk my-project --template monorepo-ts
 - `monorepo-js`
 - `monorepo-ts`
 
-查看 [create](https://github.com/zhengxs2018/zhengxs-devkit/tree/main/packages/create) 以获取每个模板的更多细节。
+查看 [create](https://github.com/zhengxs-devkit/devkit/tree/main/packages/create) 以获取每个模板的更多细节。

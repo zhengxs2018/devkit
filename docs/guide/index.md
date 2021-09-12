@@ -87,10 +87,10 @@ module.exports = defineConfig({
 └── package.json
 ```
 
-查看 [多入口打包](https://github.com/zhengxs2018/zhengxs-devkit/tree/main/examples/package-entries) 以获取更多细节。
+查看 [多入口打包](https://github.com/zhengxs-devkit/devkit/tree/main/examples/package-entries) 以获取更多细节。
 
 ## 社区
 
 如果你有疑问或者需要帮助，可以到 [GitHub 讨论区][github discussions] 来寻求帮助。
 
-[github discussions]: https://github.com/zhengxs2018/zhengxs-devkit/discussions
+[github discussions]: https://github.com/zhengxs-devkit/devkit/discussions

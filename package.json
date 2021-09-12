@@ -13,7 +13,7 @@
     "format": "prettier . --write --loglevel silent",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:release": "gh-pages -d ./docs/.vitepress/dist",
+    "docs:deploy": "gh-pages -d ./docs/.vitepress/dist",
     "pkg:build": "yarn workspace @zhengxs-devkit/build",
     "pkg:lerna": "yarn workspace @zhengxs-devkit/lerna",
     "pkg:shared": "yarn workspace @zhengxs-devkit/shared"

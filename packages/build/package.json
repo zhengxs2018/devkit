@@ -39,7 +39,7 @@
   },
   "registry": {
     "type": "git",
-    "url": "git+https://github.com/zhengxs2018/zhengxs-devkit.git",
+    "url": "git+https://github.com/zhengxs-devkit/devkit.git",
     "directory": "packages/build"
   },
   "bugs": {
