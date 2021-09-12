@@ -1,0 +1,1 @@
+import{o as e,c as a,a as n}from"./app.48470c9a.js";const t='{"title":"快速开始","description":"","frontmatter":{},"headers":[{"level":2,"title":"搭建第一个项目","slug":"搭建第一个项目"}],"relativePath":"guide/quickstart.md","lastUpdated":1631460674011}',s={},o=[n('',13)];s.render=function(n,t,s,p,r,c){return e(),a("div",null,o)};export{t as __pageData,s as default};
