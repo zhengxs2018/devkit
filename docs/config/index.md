@@ -17,7 +17,7 @@
 
 ### 智能提示
 
-因为工具本身附带 Typescript 类型，所以你可以通过 IDE 和 jsdoc 的配合来实现智能提示：
+因为工具本身附带 `Typescript` 类型，所以你可以通过 IDE 和 `jsdoc` 的配合来实现智能提示：
 
 ```js
 /**
@@ -28,7 +28,7 @@ module.exports = {
 }
 ```
 
-另外你可以使用 defineConfig 工具函数，这样不用 jsdoc 注解也可以获取类型提示：
+另外你可以使用 `defineConfig` 工具函数，这样不用 `jsdoc` 注解也可以获取类型提示：
 
 ```js
 const { defineConfig } = require('@zhengxs-devkit/build')
@@ -38,11 +38,11 @@ module.exports = defineConfig({
 })
 ```
 
-目前暂不支持 ts 和 esm 模块的配置文件。
+暂不支持 ts 和 esm 模块的配置文件。
 
 ### 数组配置
 
-暂不支持指定特定模式的个性化配置，但可以通过数组来解决：
+不支持指单个模式的个性化配置，但可以通过数组来解决：
 
 ```js
 const { defineConfig } = require('@zhengxs-devkit/build')
@@ -98,14 +98,16 @@ module.exports = defineConfig(async ctx => {
 - **类型:** `string`
 - **默认:** `undefined`
 
-`umd` 需要的库名称，其他模式可选。
+库名称，仅 `umd` 需要，其他模式可选。
 
 ### entry
 
 - **类型:** `string | string [] | { [entryName: string]: string }`
 - **默认:** `src/index.ts` | `src/index.js`
 
-入口文件配置，默认根据 `isTypescript` 或 `tsconfigFilePath` 配置自动处理，可覆盖。
+入口文件配置。
+
+如果未设置，根据 `isTypescript` 或 `tsconfigFilePath` 自动设置。
 
 更多细节请见 [input](https://rollupjs.org/guide/en/#input)
 
@@ -124,12 +126,13 @@ module.exports = defineConfig(async ctx => {
 输出文件名称，和 `outDir` 互斥。
 
 更多细节请见 [output.file](https://rollupjs.org/guide/en/#outputfile)
+
 ### outDir
 
 - **类型:** `string`
 - **默认:** `undefined`
 
-输出目录，搭配 `entryFileNames` 使用使用，和 `outFile` 互斥。
+输出目录，搭配 `entryFileNames` 使用，和 `outFile` 互斥。
 
 更多细节请见 [output.dir](https://rollupjs.org/guide/en/#outputdir)
 
@@ -214,13 +217,6 @@ Falsy 虚值的插件将被忽略，放置 `rollup` 支持的插件。
 
 编译使用的 `tsconfig.json` 文件路径。
 
-### tsconfigFilePath
-
-- **类型:** `string`
-- **默认:** `tsconfig.json`
-
-编译使用的 `tsconfig.json` 文件路径。
-
 ### tsconfigOverride
 
 - **类型:** `object`
@@ -256,11 +252,15 @@ Falsy 虚值的插件将被忽略，放置 `rollup` 支持的插件。
 
 ### bubleOptions
 
+> `buble` 不在承诺添加新的技术支持，未来会改成 `esbuild` 或其他工具。
+
 - **类型:** [`RollupBubleOptions`](https://github.com/rollup/plugins/tree/master/packages/buble#options)
 
 传递给 [@rollup/plugin-buble](https://github.com/rollup/plugins/tree/master/packages/buble) 插件的选项。
 
-非 `ts` 工程使用的是 `buble` 编译，而不是 `babel`。
+JavaScript 使用的是 [buble](https://github.com/bublejs/buble) ，而不是 [babel](https://babeljs.io/)。
+
+更多细节请见 [Bublé Guide]( https://buble.surge.sh/guide/)
 
 ### nodeExternalsOptions
 
