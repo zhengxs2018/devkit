@@ -1,10 +1,13 @@
 {
 	"folders": [
 		{
-			"path": "examples"
+			"path": "packages/create"
 		},
 		{
 			"path": "packages/build"
+		},
+		{
+			"path": "examples"
 		},
 		{
 			"path": "docs"

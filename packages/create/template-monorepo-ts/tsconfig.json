@@ -1,0 +1,26 @@
+{
+  /* Visit https://aka.ms/tsconfig.json to read more about this file */
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "declaration": true,
+    "declarationDir": "./types",
+    "emitDeclarationOnly": true, // 用于生成类型
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  // 防止编译根目录文件
+  "files": [],
+  "include": [],
+  "exclude": ["node_modules"],
+  // 项目引用，用于生成类型
+  // see https://www.staging-typescript.org/docs/handbook/project-references.html
+  "references": [
+    {
+      "path": "./packages/package-b"
+    }
+  ]
+}

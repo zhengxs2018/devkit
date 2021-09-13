@@ -1,0 +1,12 @@
+{
+  "name": "root",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "build": "build --monorepo"
+  },
+  "devDependencies": {
+    "@zhengxs-devkit/build": "^0.1.0"
+  },
+  "license": "MIT"
+}

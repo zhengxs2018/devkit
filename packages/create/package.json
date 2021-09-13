@@ -1,22 +1,31 @@
 {
-  "name": "zdk",
-  "version": "0.0.0",
-  "main": "./dist/zdk.js",
-  "types": "./types/index.d.ts",
+  "name": "create-devkit",
+  "version": "0.1.0",
+  "main": "./index.js",
+  "description": "便捷的创建 zhengxs-devkit 工程工具",
+  "bin": {
+    "create-devkit": "./index.js",
+    "cdk": "index.js"
+  },
   "publishConfig": {
     "access": "public"
   },
   "files": [
-    "dist",
-    "types"
+    "index.js",
+    "template-*"
   ],
-  "registry": {
+  "dependencies": {
+    "kolorist": "^1.5.0",
+    "minimist": "^1.2.5",
+    "prompts": "^2.4.1"
+  },
+  "repository": {
     "type": "git",
-    "url": "git+https://github.com/zhengxs2018/zhengxs-devkit.git",
+    "url": "git+https://github.com/zhengxs-devkit/devkit.git",
     "directory": "packages/create"
   },
   "bugs": {
-    "url": "https://github.com/vuejs/zhengxs-devkit/issues"
+    "url": "https://github.com/zhengxs-devkit/devkit/issues"
   },
   "engines": {
     "node": ">=10"

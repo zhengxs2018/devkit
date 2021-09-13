@@ -1,4 +1,4 @@
-// copyright https://github.com/vuejs/vue-next/blob/3ff94faca1816316c61d557fe8cc79277eaa8db6/scripts/build.js#L120
+// 文件参考：https://github.com/vuejs/vue-next/blob/3ff94faca1816316c61d557fe8cc79277eaa8db6/scripts/build.js#L120
 import path from 'path'
 import { existsSync } from 'fs'
 

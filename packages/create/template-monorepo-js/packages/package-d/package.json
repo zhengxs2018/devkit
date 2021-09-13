@@ -1,0 +1,12 @@
+{
+  "name": "package-d",
+  "private": true,
+  "version": "0.1.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.esm.js",
+  "browser": "./dist/index.umd.js",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT"
+}
