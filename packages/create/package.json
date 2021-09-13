@@ -1,6 +1,6 @@
 {
   "name": "create-devkit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "./index.js",
   "description": "便捷的创建 zhengxs-devkit 工程工具",
   "bin": {

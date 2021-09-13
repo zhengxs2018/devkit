@@ -6,7 +6,7 @@
     "build": "build --monorepo"
   },
   "devDependencies": {
-    "@zhengxs-devkit/build": "^0.1.0"
+    "@zhengxs-devkit/build": "^0.1.1"
   },
   "license": "MIT"
 }
