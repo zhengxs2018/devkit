@@ -20,7 +20,7 @@ export interface RunOptions {
   configFilePath?: string
 }
 
-export async function run(options: RunOptions): Promise<void> {
+export async function run(options: RunOptions = {}): Promise<void> {
   const { cwd: rootPath = process.cwd(), configFilePath } = options
 
   const loadConfig = configLoader(rootPath)

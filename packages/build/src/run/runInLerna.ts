@@ -15,7 +15,9 @@ import type { RunOptions } from './run'
 
 export type RunInLernaOptions = PackageFilter & RunOptions
 
-export async function runInLerna(options: RunInLernaOptions): Promise<void> {
+export async function runInLerna(
+  options: RunInLernaOptions = {}
+): Promise<void> {
   const { cwd: rootPath = process.cwd(), configFilePath } = options
 
   const findOrLoadConfig = configLoader(rootPath)

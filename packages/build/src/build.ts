@@ -17,6 +17,13 @@ import type {
   MergedUserConfig,
 } from './types'
 
+/**
+ * 工程打包
+ *
+ * todo: 支持命令行参数
+ *
+ * @param options - 打包参数
+ */
 export async function build(options: BuildOptions): Promise<void> {
   const {
     rootPath,

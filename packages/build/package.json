@@ -1,6 +1,6 @@
 {
   "name": "@zhengxs-devkit/build",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "./dist/build.js",
   "types": "./types/index.d.ts",
   "keywords": [
@@ -9,10 +9,15 @@
     "rollup",
     "monorepo"
   ],
+  "bin": {
+    "devkit-build": "./bin/build.js",
+    "build": "./bin/build.js"
+  },
   "publishConfig": {
     "access": "public"
   },
   "files": [
+    "bin",
     "dist",
     "types"
   ],
@@ -26,17 +31,19 @@
     "@zhengxs-devkit/types": "^0.1.0",
     "builtin-modules": "^3.1.0",
     "cosmiconfig": "^7.0.1",
+    "commander": "^7.2.0",
+    "kolorist": "^1.5.0",
     "lodash": "^4.17.21",
     "parse-pkg-name": "^2.0.0",
     "rollup": "^2.56.3",
     "rollup-plugin-node-externals": "^2.2.0",
     "rollup-plugin-typescript2": "^0.30.0",
-    "signal-exit": "^3.0.3",
-    "source-map-support": "^0.5.20"
+    "signal-exit": "^3.0.3"
   },
   "devDependencies": {
     "@types/signal-exit": "^3.0.1"
   },
+  "homepage": "https://zhengxs-devkit.github.io/devkit",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zhengxs-devkit/devkit.git",
