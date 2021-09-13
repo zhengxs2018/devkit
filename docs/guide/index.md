@@ -2,22 +2,49 @@
 
 ## 总览
 
-[@zhengxs-devkit/build](https://www.npmjs.com/package/@zhengxs-devkit/build) 意在提供开箱即用的配置，提供目前常用的几种配置方式，支持导出 `esm`，`cjs`，`umd` 等编译产物。
+[@zhengxs-devkit/build](https://www.npmjs.com/package/@zhengxs-devkit/build) 意在提供开箱即用的配置，提供目前常用的几种配置方式，支持输出 `esm`，`cjs`，`umd` 等格式的编译产物。
 
 同时支持 [monorepo](./run-in-lerna) 和 [package](./run) 两种编译方式，可以在 [最佳实践](/) 了解 2 种方式的优缺点。
 
-## 配置加载方式
+## 创建一个工程
 
-> 注意：如果是 `monorepo` 模式，根配置只允许返回对象。
+使用 NPM:
 
-采用当前主流配置加载方式，默认情况下，从工程目录开始搜索以下内容：
+```bash
+$ npm init devkit@latest
+```
 
-- `package.json` 文件中的 `build` 属性
-- `.buildrc`
-- `.buildrc.(js|cjs|json|yaml|yml)`
-- `build.config.(js|cjs)`
+使用 Yarn:
 
-具体说明详见 [cosmiconfig](https://www.npmjs.com/package/cosmiconfig) 模块。
+```shell
+$ yarn create devkit
+```
+
+然后按照提示操作即可！
+
+你还可以通过附加的命令行选项直接指定项目名称和你想要使用的模板。
+
+例如，要构建一个 Lerna + Typescript 项目，运行:
+
+```bash
+# npm 6.x
+npm init devkit@latest my-devkit-project --template monorepo-ts
+
+# npm 7+, 需要额外的双横线：
+npm init devkit@latest my-devkit-project -- --template monorepo-ts
+
+# yarn
+yarn create devkit my-vue-devkit-project --template monorepo-ts
+```
+
+支持的模板预设包括：
+
+- `package-js`
+- `package-ts`
+- `monorepo-js`
+- `monorepo-ts`
+
+查看 [create-devkit](https://github.com/zhengxs-devkit/devkit/tree/main/packages/create) 以获取每个模板的更多细节。
 
 ## 多入口打包
 
