@@ -8,10 +8,6 @@
   "scripts": {
     "build": "tsc --build && build"
   },
-  "files": [
-    "dist",
-    "types"
-  ],
   "dependencies": {
     "lodash": "^4.17.21"
   },

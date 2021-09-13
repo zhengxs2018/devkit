@@ -5,8 +5,5 @@
   "main": "./dist/index.js",
   "module": "./dist/index.esm.js",
   "browser": "./dist/index.umd.js",
-  "files": [
-    "dist"
-  ],
   "license": "MIT"
 }

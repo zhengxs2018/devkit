@@ -5,11 +5,8 @@
   "module": "./dist/index.esm.js",
   "browser": "./dist/index.umd.js",
   "scripts": {
-    "build": "tsc --build && build"
+    "build": "build"
   },
-  "files": [
-    "dist"
-  ],
   "dependencies": {
     "lodash": "^4.17.21"
   },

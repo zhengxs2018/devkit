@@ -6,9 +6,5 @@
   "module": "./dist/index.esm.js",
   "browser": "./dist/index.umd.js",
   "types": "./types/index.d.ts",
-  "files": [
-    "dist",
-    "types"
-  ],
   "license": "MIT"
 }

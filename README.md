@@ -1,4 +1,4 @@
-# 自用工具库
+# 非常实用的前端开发者工具库
 
 [![TypeScript](https://img.shields.io/badge/lang-typescript-informational?style=flat-square)](https://www.typescriptlang.org)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
@@ -33,8 +33,8 @@
 
 ## 待办列表
 
-- [ ] 支持命令行操作
-- [ ] 支持 `yarn create` 创建工程
+- [x] 支持命令行操作
+- [x] 支持 `yarn create` 创建工程
 - [ ] 支持 vue3 工程编译
 - [ ] 支持 react 工程编译
 

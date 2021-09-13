@@ -5,6 +5,7 @@
     "module": "commonjs",
     "declaration": true,
     "declarationDir": "./types",
+    "emitDeclarationOnly": true,
     "strict": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
