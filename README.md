@@ -12,6 +12,10 @@
 
 如果想生成 `*.d.ts` 文件，可以在 `根目录` 的 `tsconfig.json#references` 配置下。
 
+## 在线文档
+
+[中文文档](https://zhengxs-devkit.github.io/devkit/)
+
 ## 目录结构
 
 ```text
@@ -30,10 +34,6 @@
 │   ├── clean.ts
 └── package.json
 ```
-
-## 在线文档
-
-[中文文档](https://zhengxs-devkit.github.io/devkit/)
 
 ## 待办列表
 
