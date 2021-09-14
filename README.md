@@ -33,7 +33,7 @@
 
 ## 在线文档
 
-[中文文档](https://github.com/zhengxs-devkit.github.io/devkit/)
+[中文文档](https://zhengxs-devkit.github.io/devkit/)
 
 ## 待办列表
 
