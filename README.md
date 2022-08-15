@@ -4,6 +4,8 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](#License)
 
+> 推荐 [rushstack](https://rushstack.io/)，真好用
+
 项目使用自我编译的方式进行打包，添加的子包会自动被编译，默认输出 `cjs`，可以通过在包内添加 `.buildrc` 文件修改导出格式。
 
 编译脚本在 `根目录` 的 `scripts/build.ts` 中，可以配置跳过某些包的编译。
